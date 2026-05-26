@@ -1,0 +1,47 @@
+# REST servers extra args
+MESSAGES_REST_EXTRA_ARGS=-secret sd2526secret
+USERS_REST_EXTRA_ARGS=-secret sd2526secret
+
+# Gateway (not implemented yet)
+GATEWAY_REST_SERVER_MAINCLASS=
+GATEWAY_REST_PORT=
+GATEWAY_REST_EXTRA_ARGS=
+
+# GRPC Users
+USERS_GRPC_SERVER_MAINCLASS=sd2526.trab.api.server.grpc.GrpcUsersServer
+USERS_GRPC_PORT=9000
+USERS_GRPC_EXTRA_ARGS=-secret sd2526secret
+
+# GRPC Messages
+MESSAGES_GRPC_SERVER_MAINCLASS=sd2526.trab.api.server.grpc.GrpcMessagesServer
+MESSAGES_GRPC_PORT=9001
+MESSAGES_GRPC_EXTRA_ARGS=-secret sd2526secret
+
+# REST server main classes
+USERS_REST_SERVER_MAINCLASS=sd2526.trab.api.server.rest.RestUsersServer
+MESSAGES_REST_SERVER_MAINCLASS=sd2526.trab.api.server.rest.RestMessagesServer
+
+# REST ports
+USERS_REST_PORT=8080
+MESSAGES_REST_PORT=8081
+
+# Discovery configuration
+DISCOVERY_MULTICAST_IP=226.226.226.226
+DISCOVERY_MULTICAST_PORT=2266
+
+# External service (proxy) - Zoho Messages
+MESSAGES_REST_PROXY_SERVER_MAINCLASS=sd2526.trab.api.server.rest.RestProxyMessagesServer
+MESSAGES_REST_PROXY_PORT=8081
+MESSAGES_REST_PROXY_EXTRA_ARGS=-secret sd2526secret
+
+# Replicated messages server (Kafka)
+MESSAGES_REP_SERVER_MAINCLASS=sd2526.trab.api.server.rest.RestReplicatedMessagesServer
+MESSAGES_REP_PORT=8081
+MESSAGES_REP_EXTRA_ARGS_FIRST=-secret sd2526secret
+MESSAGES_REP_EXTRA_ARGS_OTHER=-secret sd2526secret
+
+# TLS Keystores
+USERS_KEYSTORES=users.ourorg0,users-0.jks,changeit users.ourorg1,users-1.jks,changeit users.ourorg2,users-2.jks,changeit
+SERVERS_KEYSTORES=messages0.ourorg0,messages0-0.jks,changeit messages1.ourorg0,messages1-0.jks,changeit messages2.ourorg0,messages2-0.jks,changeit messages0.ourorg1,messages0-1.jks,changeit messages1.ourorg1,messages1-1.jks,changeit messages2.ourorg1,messages2-1.jks,changeit messages0.ourorg2,messages0-2.jks,changeit
+CLIENT_TRUSTSTORE=client-truststore.jks
+CLIENT_TRUSTSTORE_PWD=changeit
