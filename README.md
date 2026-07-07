@@ -1,4 +1,4 @@
-# SD-Trab2 — Distributed Messaging Service
+# Distributed Messaging Service
 
 A distributed messaging service developed for the **Distributed Systems** course. This project implements a secure, replicated messaging platform exposing both **REST** and **gRPC** APIs, with support for service discovery, Kafka-based replication, TLS, and persistent storage using Hibernate.
 
